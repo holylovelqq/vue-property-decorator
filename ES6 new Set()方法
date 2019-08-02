@@ -1,0 +1,19 @@
+ Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用。
+ 语法：new Set([iterable]);
+ 其中参数iterable如果传递一个可迭代对象，它的所有元素将不重复地被添加到新的 Set中。如果不指定此参数或其值为null，则新的 Set为空。
+ 返回值：一个新的set对象
+ 简述：Set对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set中的元素只会出现一次，即 Set 中的元素是唯一的。
+ 特殊：NaN和undefined都可以被存储在Set 中， NaN之间被视为相同的值（尽管 NaN !== NaN）
+ 
+ 另外Set对象默认的属性方法实力对象参考：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set
+ 
+ 
+ 实际使用一：
+new Set()，用来去重数组。
+
+let arr = [1, 2, 2, 3];
+let set = new Set(arr);
+let newArr = Array.from(set);
+console.log(newArr); // [1, 2, 3]
+
+Set类似于数组，区别在于它所有的成员都是唯一的，不能有重复的值
